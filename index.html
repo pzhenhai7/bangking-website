@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangking - Premium Disposable Vapes | Wholesale & Bulk</title>
+  <meta name="description" content="Bangking premium disposable vapes — 6K to 350K puffs. Wholesale and bulk orders for US distributors, vape shops, and smoke shops. BANG, BANGKING, QQ BANG, BK series.">
+  <meta property="og:title" content="Bangking - Premium Disposable Vapes Wholesale">
+  <meta property="og:description" content="High-quality disposable vapes: BANG 60K-120K, BANGKING 30K-100K, QQ BANG 50K-350K. Bulk orders for US market.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23e63946'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='14' font-weight='bold' font-family='sans-serif'>BK</text></svg>">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { primary: '#e63946', dark: '#c1121f', darker: '#780000', light: '#ff6b6b' },
+            skin: {
+              primary: '#e63946',
+              secondary: '#1a1a2e',
+              base: '#282828',
+              muted: '#595959',
+              fill: '#f8f9fa',
+              inverted: '#ffffff',
+              footer: '#595959',
+              hover: '#c1121f',
+              accent: '#ffd60a'
+            }
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          container: {
+            center: true,
+            padding: { DEFAULT: '1rem', sm: '1.5rem', lg: '2rem' },
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <style>
+    /* Custom styles */
+    :root {
+      --color-brand-primary: #e63946;
+      --color-brand-dark: #1a1a2e;
+      --color-brand-accent: #ffd60a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+      color: #282828;
+      background: #fff;
+    }
+
+    /* Age Verification Modal */
+    .age-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+    }
+    .age-modal.hidden { display: none; }
+    .age-modal-content {
+      background: #1a1a2e;
+      border-radius: 16px;
+      padding: 2.5rem;
+      max-width: 560px;
+      width: 90%;
+      text-align: center;
+      color: white;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+    }
+    .age-modal-logo {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #e63946, #ff6b6b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1px;
+    }
+    .age-modal-warning {
+      background: #e63946;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+    .age-modal-btn {
+      padding: 12px 32px;
+      font-weight: 700;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+      display: inline-block;
+      margin: 0.5rem;
+    }
+    .age-btn-yes {
+      background: #e63946;
+      color: white;
+      border: 2px solid #e63946;
+    }
+    .age-btn-yes:hover { background: #c1121f; transform: translateY(-2px); }
+    .age-btn-no {
+      background: transparent;
+      color: #999;
+      border: 2px solid #555;
+    }
+    .age-btn-no:hover { border-color: #888; color: #ccc; }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: white;
+      border-bottom: 1px solid #eee;
+      transition: box-shadow 0.3s;
+    }
+    .site-header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+
+    /* Announcement Bar */
+    .announcement-bar {
+      background: #1a1a2e;
+      color: #ffd60a;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-align: center;
+      padding: 8px 16px;
+    }
+    .announcement-bar a { color: #ffd60a; text-decoration: underline; }
+
+    /* Navigation */
+    .nav-link {
+      position: relative;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #282828;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.5rem 0;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: #e63946; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #e63946;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Mega Menu */
+    .mega-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 2px solid #e63946;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      padding: 2rem;
+      display: none;
+      z-index: 999;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .mega-menu.active { display: grid; }
+    .mega-menu-col h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #e63946;
+      margin-bottom: 0.75rem;
+    }
+    .mega-menu-col a {
+      display: block;
+      font-size: 0.85rem;
+      color: #595959;
+      padding: 0.3rem 0;
+      transition: color 0.2s;
+    }
+    .mega-menu-col a:hover { color: #e63946; }
+
+    /* Hero Banner */
+    .hero-swiper { height: 520px; }
+    .hero-slide {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 8s ease;
+    }
+    .swiper-slide-active .hero-bg { transform: scale(1.05); }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      padding: 2rem;
+    }
+    .hero-content h2 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #e63946;
+      color: white;
+      padding: 12px 32px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 6px;
+      transition: all 0.3s;
+    }
+    .btn-primary:hover { background: #c1121f; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(230,57,70,0.4); }
+    .btn-outline {
+      display: inline-block;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 30px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 6px;
+      transition: all 0.3s;
+    }
+    .btn-outline:hover { background: white; color: #1a1a2e; }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1a1a2e;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: #595959;
+      margin-bottom: 2rem;
+    }
+
+    /* Category Card */
+    .category-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .category-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
+    .category-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .category-card:hover img { transform: scale(1.08); }
+    .category-card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      color: white;
+    }
+    .category-card-overlay h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .category-card-overlay span {
+      font-size: 0.75rem;
+      opacity: 0.8;
+    }
+
+    /* Product Card */
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #eee;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+      border-color: #e63946;
+    }
+    .product-card-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #e63946;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      z-index: 2;
+    }
+    .product-card-badge.new { background: #1a1a2e; }
+    .product-card-badge.hot { background: #ff6b00; }
+    .product-card-img {
+      aspect-ratio: 1;
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      overflow: hidden;
+    }
+    .product-card-img img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.4s;
+    }
+    .product-card:hover .product-card-img img { transform: scale(1.05); }
+    .product-card-info {
+      padding: 1rem 1.25rem 1.25rem;
+    }
+    .product-card-brand {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #e63946;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+    .product-card-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .product-card-puffs {
+      font-size: 0.75rem;
+      color: #595959;
+      margin-bottom: 0.75rem;
+    }
+    .product-card-price {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #1a1a2e;
+    }
+    .product-card-price .old {
+      font-size: 0.8rem;
+      color: #aaa;
+      text-decoration: line-through;
+      margin-left: 0.5rem;
+      font-weight: 400;
+    }
+
+    /* Banner Card */
+    .banner-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 300px;
+      background: #f0f0f0;
+    }
+    .banner-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .banner-card-overlay {
+      position: absolute;
+      inset: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%);
+    }
+    .banner-card-overlay h3 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .banner-card-overlay p {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .banner-card-overlay .btn-sm {
+      display: inline-block;
+      background: #e63946;
+      color: white;
+      padding: 8px 24px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      width: fit-content;
+      transition: all 0.3s;
+    }
+    .banner-card-overlay .btn-sm:hover { background: #c1121f; }
+
+    /* Review Stars */
+    .stars { color: #ffd60a; letter-spacing: 2px; }
+
+    /* Instagram Section */
+    .insta-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+    .insta-item {
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+    }
+    .insta-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .insta-item:hover img { transform: scale(1.1); }
+    .insta-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(230,57,70,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      color: white;
+      font-size: 1.5rem;
+    }
+    .insta-item:hover .insta-item-overlay { opacity: 1; }
+
+    /* Footer */
+    .site-footer {
+      background: #1a1a2e;
+      color: #ccc;
+      padding: 3rem 0 0;
+    }
+    .site-footer h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    .site-footer a {
+      display: block;
+      color: #999;
+      font-size: 0.8rem;
+      padding: 0.25rem 0;
+      transition: color 0.2s;
+    }
+    .site-footer a:hover { color: #e63946; }
+    .footer-bottom {
+      border-top: 1px solid #333;
+      margin-top: 2rem;
+      padding: 1.5rem 0;
+      font-size: 0.75rem;
+      color: #666;
+    }
+
+    /* Floating Contact Buttons */
+    .floating-contact {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9998;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-end;
+    }
+    .floating-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .floating-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+    .floating-btn.whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    .floating-btn.whatsapp:hover { background: #1ea952; }
+    .floating-btn.email {
+      background: white;
+      color: #1a1a2e;
+      border: 2px solid #eee;
+    }
+    .floating-btn.email:hover { border-color: #e63946; color: #e63946; }
+    .floating-btn i { font-size: 1.2rem; }
+
+    /* Search overlay */
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(255,255,255,0.98);
+      z-index: 9999;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 10vh;
+    }
+    .search-overlay.active { display: flex; }
+    .search-overlay input {
+      width: 90%;
+      max-width: 700px;
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      border: none;
+      border-bottom: 3px solid #1a1a2e;
+      outline: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      background: transparent;
+    }
+    .search-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #282828;
+    }
+
+    /* Trust badges section */
+    .trust-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .trust-badge i { font-size: 2rem; color: #e63946; margin-bottom: 0.75rem; }
+    .trust-badge h5 { font-weight: 700; font-size: 0.85rem; color: #1a1a2e; margin-bottom: 0.25rem; }
+    .trust-badge p { font-size: 0.75rem; color: #595959; }
+
+    /* Mobile nav */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 85%;
+      max-width: 380px;
+      height: 100vh;
+      background: white;
+      z-index: 9999;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+      box-shadow: 2px 0 30px rgba(0,0,0,0.2);
+    }
+    .mobile-nav.active { transform: translateX(0); }
+    .mobile-nav-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 9998;
+      display: none;
+    }
+    .mobile-nav-backdrop.active { display: block; }
+
+    /* Newsletter */
+    .newsletter-input {
+      padding: 12px 16px;
+      border: 2px solid #333;
+      background: transparent;
+      color: white;
+      border-radius: 6px 0 0 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      flex: 1;
+    }
+    .newsletter-input:focus { border-color: #e63946; }
+    .newsletter-btn {
+      padding: 12px 24px;
+      background: #e63946;
+      color: white;
+      border: none;
+      border-radius: 0 6px 6px 0;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .newsletter-btn:hover { background: #c1121f; }
+
+    @media (max-width: 768px) {
+      .hero-swiper { height: 380px; }
+      .hero-content h2 { font-size: 1.8rem; }
+      .insta-grid { grid-template-columns: repeat(3, 1fr); }
+      .floating-btn span { display: none; }
+      .floating-btn { padding: 14px; border-radius: 50%; width: 50px; height: 50px; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Age Verification Modal -->
+  <div class="age-modal" id="ageModal">
+    <div class="age-modal-content">
+      <div class="age-modal-logo">BANGKING</div>
+      <div class="age-modal-warning">⚠ AGE VERIFICATION</div>
+      <p style="font-size:0.85rem;color:#aaa;line-height:1.6;margin-bottom:1.5rem;">
+        The products on this site are <strong style="color:white;">age-restricted</strong> and intended for adults of legal smoking age only. By entering, you confirm you are of <strong style="color:white;">legal smoking age (21+)</strong> in your jurisdiction.
+      </p>
+      <div>
+        <button class="age-modal-btn age-btn-yes" onclick="verifyAge()">✓ Yes, I am 21+</button>
+        <button class="age-modal-btn age-btn-no" onclick="window.location.href='https://www.google.com'">✗ No, I'm under 21</button>
+      </div>
+      <p style="font-size:0.7rem;color:#666;margin-top:1.5rem;">
+        By clicking YES, you agree to our Terms of Service and Privacy Policy.
+      </p>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="toggleSearch()">✕</button>
+    <input type="text" placeholder="Search products..." id="searchInput" autofocus>
+    <p style="margin-top:1rem;color:#595959;font-size:0.85rem;">Type to search for disposable vapes, brands, or categories</p>
+  </div>
+
+  <!-- Mobile Nav Backdrop -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" onclick="closeMobileNav()"></div>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <div style="padding:1.5rem;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;">
+      <span style="font-weight:900;font-size:1.4rem;color:#e63946;">BANGKING</span>
+      <button onclick="closeMobileNav()" style="background:none;border:none;font-size:1.5rem;cursor:pointer;">✕</button>
+    </div>
+    <div style="padding:1rem;">
+      <div style="font-weight:700;font-size:0.75rem;color:#e63946;text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem;">Categories</div>
+      <a href="#" style="display:block;padding:0.6rem 0;color:#282828;font-weight:600;font-size:0.9rem;border-bottom:1px solid #f5f5f5;">🔥 New Arrivals</a>
+      <a href="#" style="display:block;padding:0.6rem 0;color:#282828;font-weight:600;font-size:0.9rem;border-bottom:1px solid #f5f5f5;">🏷️ BANG Series</a>
+      <a href="#" style="display:block;padding:0.6rem 0;color:#282828;font-weight:600;font-size:0.9rem;border-bottom:1px solid #f5f5f5;">👑 BANGKING Series</a>
+      <a href="#" style="display:block;padding:0.6rem 0;color:#282828;font-weight:600;font-size:0.9rem;border-bottom:1px solid #f5f5f5;">💥 BANG BLAZE</a>
+      <a href="#" style="display:block;padding:0.6rem 0;color:#282828;font-weight:600;font-size:0.9rem;border-bottom:1px solid #f5f5f5;">🐧 QQ BANG</a>
+      <a href="#" style="display:block;padding:0.6rem 0;color:#282828;font-weight:600;font-size:0.9rem;border-bottom:1px solid #f5f5f5;">⚡ BK Series</a>
+      <a href="#" style="display:block;padding:0.6rem 0;color:#282828;font-weight:600;font-size:0.9rem;border-bottom:1px solid #f5f5f5;">🔄 Multi-Flavor</a>
+      <a href="#" style="display:block;padding:0.6rem 0;color:#282828;font-weight:600;font-size:0.9rem;border-bottom:1px solid #f5f5f5;">🎨 Specialty Shapes</a>
+      <a href="#" style="display:block;padding:0.6rem 0;color:#282828;font-weight:600;font-size:0.9rem;border-bottom:1px solid #f5f5f5;">📦 Wholesale / Bulk</a>
+    </div>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    🔥 <strong>BANGKING</strong> — Premium Disposable Vapes Manufacturer &nbsp;|&nbsp;
+    <strong>B2B WHOLESALE</strong> for US Vape Shops & Distributors &nbsp;|&nbsp;
+    <a href="#contact">📞 WhatsApp: +86 133 7777 7042</a>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-between py-3">
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-2xl" onclick="openMobileNav()" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2 no-underline">
+          <div style="background:#e63946;width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;color:white;">BK</div>
+          <div>
+            <div style="font-weight:900;font-size:1.4rem;color:#1a1a2e;line-height:1;letter-spacing:-0.5px;">BANGKING</div>
+            <div style="font-size:0.6rem;color:#595959;letter-spacing:2px;text-transform:uppercase;">Premium Disposable Vapes</div>
+          </div>
+        </a>
+
+        <!-- Navigation (Desktop) -->
+        <nav class="hidden md:flex items-center gap-8">
+          <div style="position:relative;">
+            <a href="#" class="nav-link" onmouseenter="showMegaMenu('new')">NEW</a>
+          </div>
+          <div style="position:relative;">
+            <a href="#" class="nav-link" onmouseenter="showMegaMenu('brands')">BRANDS</a>
+          </div>
+          <div style="position:relative;">
+            <a href="#" class="nav-link" onmouseenter="showMegaMenu('disposables')">DISPOSABLES</a>
+          </div>
+          <a href="#" class="nav-link">WHOLESALE</a>
+          <a href="#" class="nav-link">BEST SELLERS</a>
+          <a href="#" class="nav-link">DEALS</a>
+        </nav>
+
+        <!-- Header Icons -->
+        <div class="flex items-center gap-4">
+          <button onclick="toggleSearch()" class="text-xl text-gray-700 hover:text-red-500 transition" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+          <a href="#" class="text-xl text-gray-700 hover:text-red-500 transition relative" aria-label="Account">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="#" class="text-xl text-gray-700 hover:text-red-500 transition relative" aria-label="Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span style="position:absolute;top:-8px;right:-10px;background:#e63946;color:white;font-size:0.6rem;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega Menu -->
+    <div class="mega-menu" id="megaMenu" onmouseleave="hideMegaMenu()">
+      <div class="mega-menu-col">
+        <h4>BANG Series</h4>
+        <a href="#">BANG 60K Puffs</a>
+        <a href="#">BANG 120K Puffs</a>
+        <a href="#">BANG 110K Puffs</a>
+        <a href="#">BANG 20K Dual Mesh</a>
+        <a href="#">BANG 12K Puffs</a>
+        <a href="#">BANG 30K PRO</a>
+      </div>
+      <div class="mega-menu-col">
+        <h4>BANGKING Series</h4>
+        <a href="#">BANGKING Pro 30K</a>
+        <a href="#">BANGKING Full-Color 30K</a>
+        <a href="#">BANGKING 60K</a>
+        <a href="#">BANGKING 100K Horizontal</a>
+        <a href="#">BANGKING 50K Landmark</a>
+        <a href="#">BANGKING POD System</a>
+      </div>
+      <div class="mega-menu-col">
+        <h4>QQ BANG & More</h4>
+        <a href="#">QQ BANG 350K (8 Flavors)</a>
+        <a href="#">QQ BANG 150K-300K</a>
+        <a href="#">QQ BANG 50K-120K</a>
+        <a href="#">BK 100K / BK 85K</a>
+        <a href="#">BANG BLAZE 40K</a>
+        <a href="#">Multi-in-1 Series</a>
+      </div>
+      <div class="mega-menu-col">
+        <h4>Quick Links</h4>
+        <a href="#">Wholesale Inquiry</a>
+        <a href="#">Shipping & Delivery</a>
+        <a href="#">Product Catalog PDF</a>
+        <a href="#">About Bangking</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner Slider -->
+  <section>
+    <div class="swiper hero-swiper" id="heroSwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide hero-slide">
+          <div class="hero-bg" style="background-image:url('images/banners/hero-bangking-collection.jpg');background-color:#1a1a2e;"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h2>BANGKING <br>Premium Collection</h2>
+            <p>30K – 100K Puffs. Industry-leading disposable vapes for the US market. Wholesale pricing available.</p>
+            <a href="#" class="btn-primary">Shop BANGKING →</a>
+            <a href="#" class="btn-outline" style="margin-left:12px;">Wholesale Inquiry</a>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide hero-slide">
+          <div class="hero-bg" style="background-image:url('images/banners/hero-landmark.jpg');background-color:#0d1b2a;"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h2>World Landmark <br>Edition 50K</h2>
+            <p>Unique landmark-themed designs. A collector's favorite. Available in bulk for US distributors.</p>
+            <a href="#" class="btn-primary">Explore →</a>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide hero-slide">
+          <div class="hero-bg" style="background-image:url('images/banners/hero-horizontal.jpg');background-color:#111;"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h2>Triple Flavor <br>Horizontal Series</h2>
+            <p>3 flavors in 1 device. Revolutionary rotating mouthpiece technology. 100K puffs.</p>
+            <a href="#" class="btn-primary">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev" style="color:white;"></div>
+      <div class="swiper-button-next" style="color:white;"></div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="py-8 bg-gray-50 border-b">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="trust-badge">
+          <i class="fas fa-truck-fast"></i>
+          <h5>Global Shipping</h5>
+          <p>Fast worldwide delivery</p>
+        </div>
+        <div class="trust-badge">
+          <i class="fas fa-shield-halved"></i>
+          <h5>Quality Guaranteed</h5>
+          <p>Premium materials</p>
+        </div>
+        <div class="trust-badge">
+          <i class="fas fa-boxes-stacked"></i>
+          <h5>Bulk / Wholesale</h5>
+          <p>Best B2B pricing</p>
+        </div>
+        <div class="trust-badge">
+          <i class="fas fa-headset"></i>
+          <h5>24/7 Support</h5>
+          <p>WhatsApp & Email</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop by Category -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <h2 class="section-title">Shop by Category</h2>
+      <p class="section-subtitle">Find the perfect disposable vape for your market</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="category-card">
+          <img src="images/products/bang-60k.jpg" alt="BANG Series" onerror="this.style.background='#f0f0f0';this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.nextElementSibling&&(this.nextElementSibling.style.background='transparent')">
+          <div class="category-card-overlay">
+            <h3>BANG Series</h3>
+            <span>60K - 120K Puffs</span>
+          </div>
+        </div>
+        <div class="category-card">
+          <img src="images/products/bangking-pro30k.jpg" alt="BANGKING Series" onerror="this.style.background='#e8e8e8'">
+          <div class="category-card-overlay">
+            <h3>BANGKING</h3>
+            <span>30K - 100K Puffs</span>
+          </div>
+        </div>
+        <div class="category-card">
+          <img src="images/products/bang-blaze-40k.jpg" alt="BANG BLAZE" onerror="this.style.background='#e8e8e8'">
+          <div class="category-card-overlay">
+            <h3>BANG BLAZE</h3>
+            <span>40K Dual Flavor</span>
+          </div>
+        </div>
+        <div class="category-card">
+          <img src="images/products/qqbang-350k.jpg" alt="QQ BANG" onerror="this.style.background='#e8e8e8'">
+          <div class="category-card-overlay">
+            <h3>QQ BANG</h3>
+            <span>50K - 350K Puffs</span>
+          </div>
+        </div>
+        <div class="category-card">
+          <img src="images/products/bk-100k.jpg" alt="BK Series" onerror="this.style.background='#e8e8e8'">
+          <div class="category-card-overlay">
+            <h3>BK Series</h3>
+            <span>15K - 100K Puffs</span>
+          </div>
+        </div>
+        <div class="category-card">
+          <img src="images/products/multi-300k.jpg" alt="Multi-in-1" onerror="this.style.background='#e8e8e8'">
+          <div class="category-card-overlay">
+            <h3>Multi-in-1</h3>
+            <span>3-in-1 to 8-in-1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Cards -->
+  <section class="py-4">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="banner-card">
+          <img src="images/banners/hero-bk.jpg" alt="BK Series Promotion" onerror="this.style.background='linear-gradient(135deg,#1a1a2e,#e63946)'">
+          <div class="banner-card-overlay">
+            <h3>Best Vape<br>of 2026</h3>
+            <p>BANGKING 100K — voted #1 disposable by US distributors</p>
+            <a href="#" class="btn-sm">Learn More →</a>
+          </div>
+        </div>
+        <div class="banner-card">
+          <img src="images/banners/hero-rotate.jpg" alt="Rotating Multi-Flavor" onerror="this.style.background='linear-gradient(135deg,#0d1b2a,#1b3a4b)'">
+          <div class="banner-card-overlay">
+            <h3>Rotating Multi-Flavor<br>Technology</h3>
+            <p>6 flavors in 1 device. 150K puffs. A game changer.</p>
+            <a href="#" class="btn-sm">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <h2 class="section-title">🔥 Featured Products</h2>
+      <p class="section-subtitle">Top-selling disposables for the US market</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <span class="product-card-badge hot">BEST SELLER</span>
+          <div class="product-card-img">
+            <img src="images/products/bang-120k.jpg" alt="BANG 120K" loading="lazy" onerror="this.style.padding='3rem';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23ccc%22 font-size=%2216%22>BANG 120K</text></svg>'">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-brand">BANG</div>
+            <div class="product-card-name">BANG 120K Puffs Disposable Vape</div>
+            <div class="product-card-puffs">12 Flavors • Mesh Coil • Type-C</div>
+            <div class="product-card-price">$32.00 <span style="font-size:0.7rem;color:#595959;font-weight:400;">USD / unit (FOB)</span></div>
+            <a href="#" class="btn-primary" style="display:block;text-align:center;margin-top:0.75rem;font-size:0.75rem;padding:8px;">Inquiry →</a>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <span class="product-card-badge new">NEW</span>
+          <div class="product-card-img">
+            <img src="images/products/bangking-60k.jpg" alt="BANGKING 60K" loading="lazy" onerror="this.style.padding='3rem';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23ccc%22 font-size=%2216%22>BK 60K</text></svg>'">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-brand">BANGKING</div>
+            <div class="product-card-name">BANGKING 60K Puffs — Full Color Display</div>
+            <div class="product-card-puffs">Digital Screen • 20 Flavors • Mesh</div>
+            <div class="product-card-price">$21.00 <span style="font-size:0.7rem;color:#595959;font-weight:400;">USD / unit (FOB)</span></div>
+            <a href="#" class="btn-primary" style="display:block;text-align:center;margin-top:0.75rem;font-size:0.75rem;padding:8px;">Inquiry →</a>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+          <span class="product-card-badge hot">POPULAR</span>
+          <div class="product-card-img">
+            <img src="images/products/qqbang-350k.jpg" alt="QQ BANG 350K" loading="lazy" onerror="this.style.padding='3rem';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23ccc%22 font-size=%2216%22>QQ 350K</text></svg>'">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-brand">QQ BANG</div>
+            <div class="product-card-name">QQ BANG 350K — 8 Flavor Switchable</div>
+            <div class="product-card-puffs">8 Flavors • 350K Puffs • USB-C</div>
+            <div class="product-card-price">$41.00 <span style="font-size:0.7rem;color:#595959;font-weight:400;">USD / unit (FOB)</span></div>
+            <a href="#" class="btn-primary" style="display:block;text-align:center;margin-top:0.75rem;font-size:0.75rem;padding:8px;">Inquiry →</a>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-card">
+          <span class="product-card-badge new">NEW</span>
+          <div class="product-card-img">
+            <img src="images/products/bang-blaze-40k.jpg" alt="BANG BLAZE 40K" loading="lazy" onerror="this.style.padding='3rem';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23ccc%22 font-size=%2216%22>BLAZE 40K</text></svg>'">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-brand">BANG BLAZE</div>
+            <div class="product-card-name">BANG BLAZE 40K Dual Flavor Disposable</div>
+            <div class="product-card-puffs">2 Flavors • 40K Puffs • Refillable</div>
+            <div class="product-card-price">$17.00 <span style="font-size:0.7rem;color:#595959;font-weight:400;">USD / unit (FOB)</span></div>
+            <a href="#" class="btn-primary" style="display:block;text-align:center;margin-top:0.75rem;font-size:0.75rem;padding:8px;">Inquiry →</a>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="images/products/bk-100k.jpg" alt="BK 100K" loading="lazy" onerror="this.style.padding='3rem';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23ccc%22 font-size=%2216%22>BK 100K</text></svg>'">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-brand">BK</div>
+            <div class="product-card-name">BK 100K Puffs — Dual Oil Tank</div>
+            <div class="product-card-puffs">Dual Tank • Digital • 15 Flavors</div>
+            <div class="product-card-price">$26.00 <span style="font-size:0.7rem;color:#595959;font-weight:400;">USD / unit (FOB)</span></div>
+            <a href="#" class="btn-primary" style="display:block;text-align:center;margin-top:0.75rem;font-size:0.75rem;padding:8px;">Inquiry →</a>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="images/products/bang-60k.jpg" alt="BANG 60K" loading="lazy" onerror="this.style.padding='3rem';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23ccc%22 font-size=%2216%22>BANG 60K</text></svg>'">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-brand">BANG</div>
+            <div class="product-card-name">BANG 60K Puffs — Transparent Tank</div>
+            <div class="product-card-puffs">Visible Tank • Mesh • 12 Flavors</div>
+            <div class="product-card-price">$21.00 <span style="font-size:0.7rem;color:#595959;font-weight:400;">USD / unit (FOB)</span></div>
+            <a href="#" class="btn-primary" style="display:block;text-align:center;margin-top:0.75rem;font-size:0.75rem;padding:8px;">Inquiry →</a>
+          </div>
+        </div>
+        <!-- Product 7 -->
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="images/products/rotate-150k.jpg" alt="Rotate 150K" loading="lazy" onerror="this.style.padding='3rem';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23ccc%22 font-size=%2216%22>Rotate 150K</text></svg>'">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-brand">BANGKING</div>
+            <div class="product-card-name">Rotating 6-Flavor 150K Puffs</div>
+            <div class="product-card-puffs">6 Flavors • Rotate Tech • 150K</div>
+            <div class="product-card-price">$32.00 <span style="font-size:0.7rem;color:#595959;font-weight:400;">USD / unit (FOB)</span></div>
+            <a href="#" class="btn-primary" style="display:block;text-align:center;margin-top:0.75rem;font-size:0.75rem;padding:8px;">Inquiry →</a>
+          </div>
+        </div>
+        <!-- Product 8 -->
+        <div class="product-card">
+          <span class="product-card-badge new">LIMITED</span>
+          <div class="product-card-img">
+            <img src="images/products/rocket-50k.jpg" alt="Rocket 50K" loading="lazy" onerror="this.style.padding='3rem';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23ccc%22 font-size=%2216%22>Rocket 50K</text></svg>'">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-brand">BANGKING</div>
+            <div class="product-card-name">Rocket Triple 50K Puffs — Unique Shape</div>
+            <div class="product-card-puffs">3 Coils • Rocket Design • 50K</div>
+            <div class="product-card-price">$21.00 <span style="font-size:0.7rem;color:#595959;font-weight:400;">USD / unit (FOB)</span></div>
+            <a href="#" class="btn-primary" style="display:block;text-align:center;margin-top:0.75rem;font-size:0.75rem;padding:8px;">Inquiry →</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="#" class="btn-primary" style="padding:14px 40px;">View All Products →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto text-center">
+      <h2 class="section-title">⭐ Customers Love Us!</h2>
+      <p class="section-subtitle">Trusted by 500+ US vape shops & distributors</p>
+      <div class="stars text-3xl mb-4">★★★★★</div>
+      <p style="font-size:1.5rem;font-weight:700;color:#1a1a2e;">"Best disposable vape supplier for our chain of 12 stores. Consistent quality, fast shipping, great margins."</p>
+      <p style="color:#595959;margin-top:1rem;">— Mike R., Vape Shop Owner, Texas</p>
+      <div class="flex justify-center gap-8 mt-8 text-sm" style="color:#595959;">
+        <div><strong style="color:#1a1a2e;font-size:1.5rem;">500+</strong><br>US Clients</div>
+        <div><strong style="color:#1a1a2e;font-size:1.5rem;">98%</strong><br>Repeat Orders</div>
+        <div><strong style="color:#1a1a2e;font-size:1.5rem;">50+</strong><br>Products</div>
+        <div><strong style="color:#1a1a2e;font-size:1.5rem;">24/7</strong><br>Support</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Gallery -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <h2 class="section-title text-center">#BANGKING Gallery</h2>
+      <p class="section-subtitle text-center">Follow us on Instagram @bangking_official</p>
+      <div class="insta-grid">
+        <div class="insta-item">
+          <img src="images/products/bangking-pro30k.jpg" alt="Gallery" loading="lazy" onerror="this.style.background='#f0f0f0'">
+          <div class="insta-item-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="insta-item">
+          <img src="images/products/bang-120k.jpg" alt="Gallery" loading="lazy" onerror="this.style.background='#f0f0f0'">
+          <div class="insta-item-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="insta-item">
+          <img src="images/products/qqbang-350k.jpg" alt="Gallery" loading="lazy" onerror="this.style.background='#f0f0f0'">
+          <div class="insta-item-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="insta-item">
+          <img src="images/products/rocket-50k.jpg" alt="Gallery" loading="lazy" onerror="this.style.background='#f0f0f0'">
+          <div class="insta-item-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="insta-item">
+          <img src="images/products/multi-300k.jpg" alt="Gallery" loading="lazy" onerror="this.style.background='#f0f0f0'">
+          <div class="insta-item-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="insta-item">
+          <img src="images/products/star-50k.jpg" alt="Gallery" loading="lazy" onerror="this.style.background='#f0f0f0'">
+          <div class="insta-item-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-12" style="background:#1a1a2e;">
+    <div class="container mx-auto text-center">
+      <h2 style="color:white;font-size:1.5rem;font-weight:800;margin-bottom:0.5rem;">📬 Get Wholesale Updates</h2>
+      <p style="color:#999;margin-bottom:1.5rem;font-size:0.9rem;">New products, price drops, and exclusive B2B offers</p>
+      <div style="display:flex;max-width:500px;margin:0 auto;">
+        <input type="email" placeholder="Enter your email" class="newsletter-input">
+        <button class="newsletter-btn">Subscribe</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Company -->
+        <div>
+          <h4>COMPANY</h4>
+          <a href="#">About Bangking</a>
+          <a href="#">Our Factory</a>
+          <a href="#">Quality Control</a>
+          <a href="#">Careers</a>
+          <a href="#">Blog</a>
+        </div>
+        <!-- Wholesale -->
+        <div>
+          <h4>WHOLESALE</h4>
+          <a href="#">B2B Pricing</a>
+          <a href="#">Bulk Orders</a>
+          <a href="#">Custom Branding (OEM)</a>
+          <a href="#">Shipping & Logistics</a>
+          <a href="#">Product Catalog</a>
+        </div>
+        <!-- Support -->
+        <div>
+          <h4>SUPPORT</h4>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping Policy</a>
+          <a href="#">Returns & Warranty</a>
+          <a href="#">Order Tracking</a>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h4>CONTACT US</h4>
+          <p style="font-size:0.8rem;color:#999;margin-bottom:0.5rem;">
+            <i class="fab fa-whatsapp" style="color:#25D366;margin-right:6px;"></i>
+            WhatsApp: <a href="https://wa.me/8613377777042" style="display:inline;color:#25D366;">+86 133 7777 7042</a>
+          </p>
+          <p style="font-size:0.8rem;color:#999;margin-bottom:0.5rem;">
+            <i class="far fa-envelope" style="color:#e63946;margin-right:6px;"></i>
+            Email: <a href="mailto:pzhenhai7@gmail.com" style="display:inline;color:white;">pzhenhai7@gmail.com</a>
+          </p>
+          <p style="font-size:0.8rem;color:#999;margin-bottom:1rem;">
+            <i class="fas fa-map-marker-alt" style="color:#e63946;margin-right:6px;"></i>
+            Huizhou, Guangdong, China
+          </p>
+          <div style="display:flex;gap:12px;font-size:1.2rem;">
+            <a href="#" style="color:#999;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="color:#999;"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color:#999;"><i class="fab fa-linkedin"></i></a>
+            <a href="#" style="color:#999;"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div style="background:#e63946;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.7rem;color:white;">BK</div>
+            <span style="font-weight:700;color:white;font-size:0.85rem;">BANGKING</span>
+          </div>
+          <p>© 2026 Bangking — Huizhou Wanhong Technology Co., Ltd. All rights reserved.</p>
+          <div style="display:flex;gap:16px;">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Age Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Buttons -->
+  <div class="floating-contact">
+    <a href="https://wa.me/8613377777042" target="_blank" class="floating-btn whatsapp" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="mailto:pzhenhai7@gmail.com" class="floating-btn email" title="Send Email">
+      <i class="far fa-envelope"></i>
+      <span>pzhenhai7@gmail.com</span>
+    </a>
+  </div>
+
+  <script>
+    // Age Verification
+    function verifyAge() {
+      document.getElementById('ageModal').classList.add('hidden');
+      document.body.style.overflow = '';
+      // Store in session so it doesn't pop up again
+      sessionStorage.setItem('ageVerified', 'true');
+    }
+
+    // Check if already verified this session
+    if (sessionStorage.getItem('ageVerified') === 'true') {
+      document.getElementById('ageModal').classList.add('hidden');
+      document.body.style.overflow = '';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Mega Menu
+    function showMegaMenu(type) {
+      document.getElementById('megaMenu').classList.add('active');
+    }
+    function hideMegaMenu() {
+      document.getElementById('megaMenu').classList.remove('active');
+    }
+
+    // Search Toggle
+    function toggleSearch() {
+      const overlay = document.getElementById('searchOverlay');
+      overlay.classList.toggle('active');
+      if (overlay.classList.contains('active')) {
+        document.getElementById('searchInput').focus();
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+    // Close search on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('searchOverlay').classList.remove('active');
+        document.body.style.overflow = '';
+        document.getElementById('megaMenu').classList.remove('active');
+        closeMobileNav();
+      }
+    });
+
+    // Mobile Nav
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('active');
+      document.getElementById('mobileNavBackdrop').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('active');
+      document.getElementById('mobileNavBackdrop').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('siteHeader');
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Hero Swiper
+    const heroSwiper = new Swiper('#heroSwiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      speed: 800,
+    });
+  </script>
+</body>
+</html>
