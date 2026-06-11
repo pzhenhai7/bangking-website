@@ -732,7 +732,7 @@ function renderProducts(filter='all'){
         <div class="product-card-flavors">🍬 ${p.flavors} Flavors • ${p.feature}</div>
         <div class="product-card-price">$${p.price.toFixed(2)} <small>USD / unit (FOB)</small></div>
         <div class="product-card-actions">
-          <button class="btn-sm" style="flex:1;text-align:center" onclick="addToCart(${p.id})">🛒 Add to Inquiry</button>
+          <button type="button" class="btn-sm" style="flex:1;text-align:center" onclick="addToCart(${p.id});return false">🛒 Add to Inquiry</button>
         </div>
       </div>
     </div>
@@ -773,8 +773,9 @@ function addToCart(id){
   if(existing){existing.qty++;}else{inquiryCart.push({id,qty:1});}
   saveCart();
   showToast('✅ Added to Inquiry Cart');
-  document.getElementById('cartBadge').classList.add('pulse');
-  setTimeout(()=>document.getElementById('cartBadge').classList.remove('pulse'),400);
+  var badge=document.getElementById('cartBadge');
+  if(badge){badge.classList.add('pulse');setTimeout(function(){badge.classList.remove('pulse')},400);}
+  return false;
 }
 function removeFromCart(id){inquiryCart=inquiryCart.filter(i=>i.id!==id);saveCart();}
 function clearCart(){inquiryCart=[];saveCart();renderCart();}
@@ -859,6 +860,12 @@ function subscribeNewsletter(){const e=document.getElementById('newsletterEmail'
 // ===== ESC & SCROLL =====
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('searchOverlay').classList.remove('active');document.getElementById('megaMenu').classList.remove('active');document.getElementById('contactModal').classList.remove('active');document.getElementById('cartModal').classList.remove('active');closeMobileNav();document.body.style.overflow='';}});
 window.addEventListener('scroll',()=>{document.getElementById('siteHeader').classList.toggle('scrolled',window.scrollY>10);document.getElementById('backToTop').classList.toggle('visible',window.scrollY>500);});
+
+// ===== FIX ALL BUTTON TYPES =====
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('button:not([type])').forEach(function(btn){btn.setAttribute('type','button')});
+  document.querySelectorAll('a[onclick]').forEach(function(a){if(!a.getAttribute('href')||a.getAttribute('href')==='#'){a.setAttribute('href','javascript:void(0)')}});
+});
 
 // ===== INIT =====
 renderProducts();
