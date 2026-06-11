@@ -2,3 +2,9 @@
 preview*.png
 *.pyc
 __pycache__
+node_modules/
+tailwind.config.js
+input.css
+assets/tailwind.css
+package.json
+package-lock.json
