@@ -487,6 +487,7 @@
       <button class="filter-pill" onclick="filterProducts('BLAZE')">BANG BLAZE</button>
       <button class="filter-pill" onclick="filterProducts('Multi')">Multi-in-1</button>
       <button class="filter-pill" onclick="filterProducts('Special')">Specialty</button>
+      <button class="filter-pill" onclick="filterProducts('OTHER')">Other</button>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" id="productGrid"></div>
     <div class="text-center mt-8">
@@ -499,22 +500,32 @@
 <!-- Spec Comparison -->
 <section class="py-12 bg-gray-50" id="specs">
   <div class="container mx-auto">
-    <h2 class="section-title text-center">📊 Product Specifications</h2>
-    <p class="section-subtitle text-center">Quick comparison of our top-selling models</p>
+    <h2 class="section-title text-center">📊 Product Specs & Tax Guide</h2>
+    <p class="section-subtitle text-center">36 products · FOB export (0% VAT) · Domestic (+13% VAT) · US import (~3% duty)</p>
     <div style="overflow-x:auto">
       <table class="spec-table">
-        <thead><tr><th>Product</th><th>Puffs</th><th>E-Liquid</th><th>Battery</th><th>Flavors</th><th>Feature</th><th>Price (FOB)</th></tr></thead>
+        <thead><tr><th>Product</th><th>Puffs</th><th>Flavors</th><th>Feature</th><th>FOB (0% VAT)</th><th>+13% VAT</th><th>US Duty ~3%</th><th>Margin</th></tr></thead>
         <tbody>
-          <tr><td><strong>BANG 120K</strong></td><td>120,000</td><td>36ml</td><td>900mAh</td><td>12</td><td>Mesh Coil • Type-C</td><td style="font-weight:700;color:#e63946">$32.00</td></tr>
-          <tr><td><strong>BANGKING 100K</strong></td><td>100,000</td><td>30ml</td><td>850mAh</td><td>15</td><td>Digital Display</td><td style="font-weight:700;color:#e63946">$30.00</td></tr>
-          <tr><td><strong>QQ BANG 350K</strong></td><td>350,000</td><td>50ml</td><td>1200mAh</td><td>8</td><td>8-Flavor Switchable</td><td style="font-weight:700;color:#e63946">$41.00</td></tr>
-          <tr><td><strong>Rotate 150K</strong></td><td>150,000</td><td>35ml</td><td>1000mAh</td><td>6</td><td>Rotating Mouthpiece</td><td style="font-weight:700;color:#e63946">$32.00</td></tr>
-          <tr><td><strong>BK 100K</strong></td><td>100,000</td><td>28ml</td><td>800mAh</td><td>15</td><td>Dual Oil Tank</td><td style="font-weight:700;color:#e63946">$26.00</td></tr>
-          <tr><td><strong>BANGKING 60K</strong></td><td>60,000</td><td>22ml</td><td>650mAh</td><td>20</td><td>Full-Color Screen</td><td style="font-weight:700;color:#e63946">$21.00</td></tr>
-          <tr><td><strong>BANG BLAZE 40K</strong></td><td>40,000</td><td>18ml</td><td>600mAh</td><td>12</td><td>Dual Flavor • Refillable</td><td style="font-weight:700;color:#e63946">$17.00</td></tr>
-          <tr><td><strong>Rocket 50K</strong></td><td>50,000</td><td>20ml</td><td>700mAh</td><td>12</td><td>Triple Coil • Unique</td><td style="font-weight:700;color:#e63946">$21.00</td></tr>
+          <tr><td><strong>QQ BANG 350K</strong> 🔥</td><td>350,000</td><td>8</td><td>8-Flavor Switch</td><td style="font-weight:700;color:#e63946">$41.00</td><td>$46.33</td><td>+$1.23</td><td>82%</td></tr>
+          <tr><td><strong>BANGKING 250K</strong></td><td>250,000</td><td>8</td><td>Ultra Capacity</td><td style="font-weight:700;color:#e63946">$36.00</td><td>$40.68</td><td>+$1.08</td><td>80%</td></tr>
+          <tr><td><strong>BANG BLAZE 200K</strong></td><td>200,000</td><td>10</td><td>High-Capacity</td><td style="font-weight:700;color:#e63946">$36.00</td><td>$40.68</td><td>+$1.08</td><td>79%</td></tr>
+          <tr><td><strong>Rotate 150K</strong> 🔥</td><td>150,000</td><td>6</td><td>Rotating Mouthpiece</td><td style="font-weight:700;color:#e63946">$32.00</td><td>$36.16</td><td>+$0.96</td><td>78%</td></tr>
+          <tr><td><strong>BANG 120K</strong> 🔥</td><td>120,000</td><td>12</td><td>Flagship Mesh</td><td style="font-weight:700;color:#e63946">$32.00</td><td>$36.16</td><td>+$0.96</td><td>76%</td></tr>
+          <tr><td><strong>BANGKING 100K</strong></td><td>100,000</td><td>3</td><td>Horizontal 3-Flavor</td><td style="font-weight:700;color:#e63946">$30.00</td><td>$33.90</td><td>+$0.90</td><td>77%</td></tr>
+          <tr><td><strong>BK 100K</strong></td><td>100,000</td><td>15</td><td>Dual Oil Tank</td><td style="font-weight:700;color:#e63946">$26.00</td><td>$29.38</td><td>+$0.78</td><td>75%</td></tr>
+          <tr><td><strong>BANGKING 60K</strong></td><td>60,000</td><td>20</td><td>Full-Color Screen</td><td style="font-weight:700;color:#e63946">$21.00</td><td>$23.73</td><td>+$0.63</td><td>68%</td></tr>
+          <tr><td><strong>BANGKING 50K</strong></td><td>50,000</td><td>12</td><td>Landmark Edition</td><td style="font-weight:700;color:#e63946">$27.00</td><td>$30.51</td><td>+$0.81</td><td>76%</td></tr>
+          <tr><td><strong>Rocket 50K</strong></td><td>50,000</td><td>12</td><td>Triple Coil · Unique</td><td style="font-weight:700;color:#e63946">$21.00</td><td>$23.73</td><td>+$0.63</td><td>73%</td></tr>
+          <tr><td><strong>BANG BLAZE 40K</strong> 💰</td><td>40,000</td><td>12</td><td>Dual Flavor · Best Value</td><td style="font-weight:700;color:#e63946">$17.00</td><td>$19.21</td><td>+$0.51</td><td>68%</td></tr>
+          <tr><td><strong>BANGKING POD</strong></td><td>5,000</td><td>10</td><td>Refillable System</td><td style="font-weight:700;color:#e63946">$12.00</td><td>$13.56</td><td>+$0.36</td><td>63%</td></tr>
         </tbody>
       </table>
+    </div>
+    <div style="background:#fff3cd;border:1px solid #ffc107;padding:12px 20px;border-radius:8px;margin-top:1rem;font-size:0.8rem">
+      <strong>🧾 Tax Guide:</strong>
+      <span style="color:#059669;font-weight:700">FOB Price = Export 0% VAT</span> (China export tax rebate applies) ·
+      <span style="color:#e63946;font-weight:700">Domestic +13% VAT</span> (for CNY transactions within China) ·
+      <span style="color:#1a1a2e;font-weight:700">US Import Duty ~3%</span> (paid by US importer, estimated. Actual rate depends on HTS classification)
     </div>
   </div>
 </section>
@@ -692,26 +703,47 @@
 <script>
 // ===== PRODUCT DATABASE (from bang全品单价.xlsx) =====
 const allProducts = [
-  {id:1,brand:'BANG',name:'BANG 120K Puffs',puffs:'120,000',flavors:12,price:32.00,badge:'best',badgeText:'BEST SELLER',img:'images/products/bang-120k.jpg',desc:'Mesh Coil • Type-C • 36ml',category:'BANG',feature:'Flagship high-puff device'},
-  {id:2,brand:'BANGKING',name:'BANGKING 60K — Full-Color',puffs:'60,000',flavors:20,price:21.00,badge:'new',badgeText:'NEW',img:'images/products/bangking-60k.jpg',desc:'Digital Screen • 20 Flavors • 22ml',category:'BANGKING',feature:'Full-color digital display'},
-  {id:3,brand:'QQ BANG',name:'QQ BANG 350K — 8 Flavors',puffs:'350,000',flavors:8,price:41.00,badge:'hot',badgeText:'POPULAR',img:'images/products/qqbang-350k.jpg',desc:'8 Flavors • 50ml • USB-C',category:'QQ BANG',feature:'8-flavor switchable system'},
-  {id:4,brand:'BANG BLAZE',name:'BANG BLAZE 40K Dual Flavor',puffs:'40,000',flavors:12,price:17.00,badge:'new',badgeText:'NEW',img:'images/products/bang-blaze-40k.jpg',desc:'2 Flavors • 18ml • Refillable',category:'BLAZE',feature:'Dual flavor with refillable tank'},
-  {id:5,brand:'BK',name:'BK 100K — Dual Oil Tank',puffs:'100,000',flavors:15,price:26.00,badge:'',badgeText:'',img:'images/products/bk-100k.jpg',desc:'Dual Tank • Digital • 28ml',category:'BK',feature:'Dual oil tank technology'},
-  {id:6,brand:'BANG',name:'BANG 60K — Transparent Tank',puffs:'60,000',flavors:12,price:21.00,badge:'',badgeText:'',img:'images/products/bang-60k.jpg',desc:'Visible Tank • Mesh • 22ml',category:'BANG',feature:'Transparent oil tank'},
-  {id:7,brand:'BANGKING',name:'Rotating 6-Flavor 150K',puffs:'150,000',flavors:6,price:32.00,badge:'hot',badgeText:'HOT',img:'images/products/rotate-150k.jpg',desc:'6 Flavors • Rotate Tech • 35ml',category:'BANGKING',feature:'Rotating mouthpiece technology'},
-  {id:8,brand:'BANGKING',name:'Rocket Triple 50K',puffs:'50,000',flavors:12,price:21.00,badge:'limited',badgeText:'LIMITED',img:'images/products/rocket-50k.jpg',desc:'3 Coils • Unique Shape • 20ml',category:'BANGKING',feature:'Unique rocket design'},
-  {id:9,brand:'BANGKING',name:'BANGKING Pro 30K',puffs:'30,000',flavors:15,price:19.80,badge:'',badgeText:'',img:'images/products/bangking-pro30k.jpg',desc:'Pro Edition • 15 Flavors • 14ml',category:'BANGKING',feature:'Professional grade'},
-  {id:10,brand:'BANGKING',name:'BANGKING 100K Horizontal',puffs:'100,000',flavors:3,price:30.00,badge:'hot',badgeText:'TRENDING',img:'images/products/bangking-60k.jpg',desc:'3 Flavors • Horizontal • 30ml',category:'BANGKING',feature:'Horizontal triple flavor'},
-  {id:11,brand:'BANG',name:'BANG 110K LEGEND',puffs:'110,000',flavors:12,price:29.00,badge:'',badgeText:'',img:'images/products/bang-120k.jpg',desc:'Mesh Coil • Type-C • 34ml',category:'BANG',feature:'Legend series premium'},
-  {id:12,brand:'BANG BLAZE',name:'BANG BLAZE 60K',puffs:'60,000',flavors:12,price:27.00,badge:'best',badgeText:'VALUE',img:'images/products/bang-blaze-40k.jpg',desc:'12 Flavors • Mesh • 24ml',category:'BLAZE',feature:'High-performance blaze'},
-  {id:13,brand:'QQ BANG',name:'QQ BANG 150K',puffs:'150,000',flavors:6,price:26.00,badge:'',badgeText:'',img:'images/products/qqbang-350k.jpg',desc:'6 Flavors • USB-C • 32ml',category:'QQ BANG',feature:'Mid-range multi-flavor'},
-  {id:14,brand:'BANGKING',name:'BANGKING 50K Landmark',puffs:'50,000',flavors:12,price:27.00,badge:'limited',badgeText:'COLLECTOR',img:'images/products/bangking-pro30k.jpg',desc:'Landmark Design • 12 Flavors',category:'BANGKING',feature:'World landmark collector series'},
-  {id:15,brand:'BANGKING',name:'BANGKING 250K',puffs:'250,000',flavors:8,price:32.00,badge:'best',badgeText:'ULTRA',img:'images/products/bangking-60k.jpg',desc:'8 Flavors • Digital • 40ml',category:'BANGKING',feature:'Ultra-high capacity'},
-  {id:16,brand:'QQ BANG',name:'QQ BANG 100K',puffs:'100,000',flavors:12,price:18.00,badge:'',badgeText:'',img:'images/products/qqbang-350k.jpg',desc:'12 Flavors • Mesh • 26ml',category:'QQ BANG',feature:'Best value QQ series'},
-  {id:17,brand:'BK',name:'BK 85K',puffs:'85,000',flavors:12,price:23.00,badge:'',badgeText:'',img:'images/products/bk-100k.jpg',desc:'12 Flavors • Digital • 24ml',category:'BK',feature:'Mid-range BK workhorse'},
-  {id:18,brand:'BANG BLAZE',name:'BANG BLAZE 140K',puffs:'140,000',flavors:10,price:23.00,badge:'hot',badgeText:'POWER',img:'images/products/bang-blaze-40k.jpg',desc:'10 Flavors • Mesh • 38ml',category:'BLAZE',feature:'High-capacity blaze'},
-  {id:19,brand:'BANG',name:'BANG 40K Puffs',puffs:'40,000',flavors:12,price:17.80,badge:'value',badgeText:'BUDGET',img:'images/products/bang-60k.jpg',desc:'12 Flavors • Mesh • 16ml',category:'BANG',feature:'Entry-level BANG'},
-  {id:20,brand:'BANGKING',name:'BANGKING POD System',puffs:'5,000',flavors:10,price:12.00,badge:'new',badgeText:'POD',img:'images/products/bangking-pro30k.jpg',desc:'Refillable POD • 10 Flavors',category:'BANGKING',feature:'Refillable pod system'},
+  // ULTRA PREMIUM (200K-350K)
+  {id:1,brand:'QQ BANG',name:'QQ BANG 350K — 8 Flavors',puffs:'350,000',flavors:8,price:41.00,badge:'hot',badgeText:'#1 SELLER',img:'images/products/qqbang-350k.jpg',desc:'8 Flavors • 50ml • USB-C',category:'QQ BANG',feature:'8-flavor switchable · 82% margin'},
+  {id:2,brand:'BANGKING',name:'BANGKING 250K — Ultra',puffs:'250,000',flavors:8,price:36.00,badge:'best',badgeText:'ULTRA',img:'images/products/bangking-60k.jpg',desc:'8 Flavors • Digital • 40ml',category:'BANGKING',feature:'Ultra-high capacity · 80% margin'},
+  {id:3,brand:'BANG BLAZE',name:'BANG BLAZE 200K',puffs:'200,000',flavors:10,price:36.00,badge:'hot',badgeText:'POWER',img:'images/products/bang-blaze-40k.jpg',desc:'10 Flavors • Mesh • 45ml',category:'BLAZE',feature:'High-capacity blaze · 79% margin'},
+  // HIGH-END (110K-180K)
+  {id:4,brand:'BANGKING',name:'Rotate 150K — 6 Flavors',puffs:'150,000',flavors:6,price:32.00,badge:'hot',badgeText:'#3 SELLER',img:'images/products/rotate-150k.jpg',desc:'6 Flavors • Rotating Mouthpiece • 35ml',category:'BANGKING',feature:'Rotating tech · 78% margin'},
+  {id:5,brand:'BANG',name:'BANG 120K — Flagship',puffs:'120,000',flavors:12,price:32.00,badge:'best',badgeText:'#2 SELLER',img:'images/products/bang-120k.jpg',desc:'12 Flavors • Mesh Coil • Type-C • 36ml',category:'BANG',feature:'Flagship · 76% margin'},
+  {id:6,brand:'QQ BANG',name:'QQ BANG 180K',puffs:'180,000',flavors:8,price:34.00,badge:'',badgeText:'',img:'images/products/qqbang-350k.jpg',desc:'8 Flavors • USB-C • 40ml',category:'QQ BANG',feature:'Large capacity · 80% margin'},
+  {id:7,brand:'QQ BANG',name:'QQ BANG 170K',puffs:'170,000',flavors:6,price:33.00,badge:'',badgeText:'',img:'images/products/qqbang-350k.jpg',desc:'6 Flavors • USB-C • 38ml',category:'QQ BANG',feature:'Best margin · 84% margin'},
+  {id:8,brand:'QQ BANG',name:'QQ BANG 150K',puffs:'150,000',flavors:6,price:32.00,badge:'',badgeText:'',img:'images/products/qqbang-350k.jpg',desc:'6 Flavors • USB-C • 32ml',category:'QQ BANG',feature:'Mid multi-flavor · 80% margin'},
+  {id:9,brand:'BANG BLAZE',name:'BANG BLAZE 140K',puffs:'140,000',flavors:10,price:32.00,badge:'hot',badgeText:'VALUE',img:'images/products/bang-blaze-40k.jpg',desc:'10 Flavors • Mesh • 38ml',category:'BLAZE',feature:'High-capacity · 81% margin'},
+  {id:10,brand:'QQ BANG',name:'QQ BANG 120K',puffs:'120,000',flavors:12,price:32.00,badge:'',badgeText:'',img:'images/products/qqbang-350k.jpg',desc:'12 Flavors • Mesh • 30ml',category:'QQ BANG',feature:'Great margin · 82% margin'},
+  {id:11,brand:'BANG',name:'BANG LEGEND 110K',puffs:'110,000',flavors:12,price:29.00,badge:'',badgeText:'',img:'images/products/bang-120k.jpg',desc:'12 Flavors • Mesh Coil • 34ml',category:'BANG',feature:'Legend series · 77% margin'},
+  // MID-HIGH (60K-100K)
+  {id:12,brand:'BANGKING',name:'BANGKING 100K — Horizontal',puffs:'100,000',flavors:3,price:30.00,badge:'hot',badgeText:'TRENDING',img:'images/products/bangking-60k.jpg',desc:'3 Flavors • Horizontal Design • 30ml',category:'BANGKING',feature:'Triple flavor · 77% margin'},
+  {id:13,brand:'BK',name:'BK 100K — Dual Oil Tank',puffs:'100,000',flavors:15,price:26.00,badge:'hot',badgeText:'VALUE',img:'images/products/bk-100k.jpg',desc:'15 Flavors • Dual Tank • Digital • 28ml',category:'BK',feature:'Dual tank · 75% margin'},
+  {id:14,brand:'BANGKING',name:'BANGKING 100K — Dual Tank',puffs:'100,000',flavors:15,price:30.00,badge:'',badgeText:'',img:'images/products/bangking-pro30k.jpg',desc:'15 Flavors • Dual Tank • 30ml',category:'BANGKING',feature:'Premium workhorse · 77% margin'},
+  {id:15,brand:'QQ BANG',name:'QQ BANG 100K',puffs:'100,000',flavors:12,price:26.00,badge:'value',badgeText:'BUDGET',img:'images/products/qqbang-350k.jpg',desc:'12 Flavors • Mesh • 26ml',category:'QQ BANG',feature:'Best value QQ · 80% margin'},
+  {id:16,brand:'BK',name:'BK 85K',puffs:'85,000',flavors:12,price:26.00,badge:'',badgeText:'',img:'images/products/bk-100k.jpg',desc:'12 Flavors • Digital • 24ml',category:'BK',feature:'Mid-range · 74% margin'},
+  {id:17,brand:'QQ BANG',name:'QQ BANG 80K',puffs:'80,000',flavors:10,price:25.00,badge:'',badgeText:'',img:'images/products/qqbang-350k.jpg',desc:'10 Flavors • USB-C • 22ml',category:'QQ BANG',feature:'Balanced · 79% margin'},
+  {id:18,brand:'BANG',name:'BANG 60K — Transparent',puffs:'60,000',flavors:12,price:21.00,badge:'',badgeText:'',img:'images/products/bang-60k.jpg',desc:'12 Flavors • Visible Tank • 22ml',category:'BANG',feature:'Transparent tank · 68% margin'},
+  {id:19,brand:'BANGKING',name:'BANGKING 60K — Full-Color',puffs:'60,000',flavors:20,price:21.00,badge:'new',badgeText:'NEW',img:'images/products/bangking-60k.jpg',desc:'20 Flavors • Digital Screen • 22ml',category:'BANGKING',feature:'Full-color display · 68% margin'},
+  {id:20,brand:'QQ BANG',name:'QQ BANG 60K',puffs:'60,000',flavors:12,price:21.00,badge:'',badgeText:'',img:'images/products/qqbang-350k.jpg',desc:'12 Flavors • Mesh • 20ml',category:'QQ BANG',feature:'Compact · 78% margin'},
+  // MID-RANGE (30K-50K)
+  {id:21,brand:'BANGKING',name:'BANGKING 50K — Landmark',puffs:'50,000',flavors:12,price:27.00,badge:'limited',badgeText:'COLLECTOR',img:'images/products/bangking-pro30k.jpg',desc:'12 Flavors • Collector Design',category:'BANGKING',feature:'World landmark · 76% margin'},
+  {id:22,brand:'BANGKING',name:'Rocket 50K — Triple Coil',puffs:'50,000',flavors:12,price:21.00,badge:'limited',badgeText:'UNIQUE',img:'images/products/rocket-50k.jpg',desc:'12 Flavors • Rocket Shape • 20ml',category:'BANGKING',feature:'Unique design · 73% margin'},
+  {id:23,brand:'QQ BANG',name:'QQ BANG 50K',puffs:'50,000',flavors:12,price:21.00,badge:'',badgeText:'',img:'images/products/qqbang-350k.jpg',desc:'12 Flavors • USB-C • 18ml',category:'QQ BANG',feature:'Entry QQ · 78% margin'},
+  {id:24,brand:'BANG',name:'BANG 40K — Flame Edition',puffs:'40,000',flavors:12,price:17.80,badge:'value',badgeText:'BUDGET',img:'images/products/bang-60k.jpg',desc:'12 Flavors • Mesh • 16ml',category:'BANG',feature:'Flame design · 71% margin'},
+  {id:25,brand:'BANG BLAZE',name:'BANG BLAZE 40K — Dual',puffs:'40,000',flavors:12,price:17.00,badge:'value',badgeText:'BEST VALUE',img:'images/products/bang-blaze-40k.jpg',desc:'12 Flavors • Dual Flavor • Refillable',category:'BLAZE',feature:'Max margin · 68% margin'},
+  {id:26,brand:'BANG',name:'BANG 36K',puffs:'36,000',flavors:12,price:17.00,badge:'',badgeText:'',img:'images/products/bang-60k.jpg',desc:'12 Flavors • Mesh • 15ml',category:'BANG',feature:'Mid puffs · 59% margin'},
+  {id:27,brand:'BANGKING',name:'BANGKING Pro 30K',puffs:'30,000',flavors:15,price:19.80,badge:'new',badgeText:'PRO',img:'images/products/bangking-pro30k.jpg',desc:'15 Flavors • Pro Edition • 14ml',category:'BANGKING',feature:'Professional · 72% margin'},
+  {id:28,brand:'BANGKING',name:'BANGKING 30K',puffs:'30,000',flavors:15,price:17.00,badge:'',badgeText:'',img:'images/products/bangking-pro30k.jpg',desc:'15 Flavors • Standard • 14ml',category:'BANGKING',feature:'Entry BANGKING · 67% margin'},
+  {id:29,brand:'BANG',name:'BANG 30K — Display',puffs:'30,000',flavors:12,price:17.00,badge:'',badgeText:'',img:'images/products/bang-60k.jpg',desc:'12 Flavors • Digital Display • 14ml',category:'BANG',feature:'Screen version · 63% margin'},
+  {id:30,brand:'QQ BANG',name:'QQ BANG 30K',puffs:'30,000',flavors:10,price:17.00,badge:'',badgeText:'',img:'images/products/qqbang-350k.jpg',desc:'10 Flavors • USB-C • 12ml',category:'QQ BANG',feature:'Compact QQ · 74% margin'},
+  // ENTRY LEVEL (5K-25K)
+  {id:31,brand:'BANG',name:'BANG 25K',puffs:'25,000',flavors:12,price:15.00,badge:'',badgeText:'',img:'images/products/bang-60k.jpg',desc:'12 Flavors • Mesh • 12ml',category:'BANG',feature:'Entry level · 56% margin'},
+  {id:32,brand:'BANG',name:'BANG 20K — Dual Mesh',puffs:'20,000',flavors:8,price:14.00,badge:'',badgeText:'',img:'images/products/bang-120k.jpg',desc:'8 Flavors • Dual Mesh Coil • 10ml',category:'BANG',feature:'Dual coil · 61% margin'},
+  {id:33,brand:'BANGKING',name:'BANGKING 15K — Display',puffs:'15,000',flavors:10,price:13.00,badge:'',badgeText:'',img:'images/products/bangking-pro30k.jpg',desc:'10 Flavors • Digital Display • 8ml',category:'BANGKING',feature:'Compact screen · 56% margin'},
+  {id:34,brand:'BANG',name:'BANG 12K',puffs:'12,000',flavors:18,price:12.00,badge:'',badgeText:'',img:'images/products/bang-60k.jpg',desc:'18 Flavors • Mesh • 6ml',category:'BANG',feature:'Starter · 59% margin'},
+  {id:35,brand:'BANGKING',name:'BANGKING POD System',puffs:'5,000',flavors:10,price:12.00,badge:'new',badgeText:'POD',img:'images/products/star-50k.jpg',desc:'10 Flavors • Refillable POD',category:'BANGKING',feature:'Refillable · 63% margin'},
+  {id:36,brand:'OTHER',name:'BC5000 — Compact',puffs:'5,000',flavors:15,price:10.00,badge:'value',badgeText:'MINI',img:'images/products/star-50k.jpg',desc:'15 Flavors • Ultra Compact',category:'OTHER',feature:'Budget · 59% margin'},
 ];
 
 // ===== RENDER PRODUCTS =====
@@ -730,7 +762,8 @@ function renderProducts(filter='all'){
         <div class="product-card-name">${p.name}</div>
         <div class="product-card-puffs">🔥 ${p.puffs} Puffs • ${p.desc}</div>
         <div class="product-card-flavors">🍬 ${p.flavors} Flavors • ${p.feature}</div>
-        <div class="product-card-price">$${p.price.toFixed(2)} <small>USD / unit (FOB)</small></div>
+        <div class="product-card-price">$${p.price.toFixed(2)} <small>USD FOB</small></div>
+        <div style="font-size:0.6rem;color:#888;margin-top:2px">+13% VAT: $${(p.price*1.13).toFixed(2)} | US duty est. 3%</div>
         <div class="product-card-actions">
           <button type="button" class="btn-sm" style="flex:1;text-align:center" onclick="addToCart(${p.id});return false">🛒 Add to Inquiry</button>
         </div>
